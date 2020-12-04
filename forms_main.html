@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Forms Assignment</title>
+        <link href="style-sheets/forms-style.css" rel="stylesheet"/>
+        <script src="forms_validate_3.js"></script>
+    </head>
+
+    <body>
+        <div id="formWrapper">
+            <h1 id="title">Sample Contact Form</h1>
+        <form name="assignmentForm" id="assignmentForm" method="post" novalidate>
+            <fieldset>
+                <legend>
+                    <b>Please fill out these fields:</b>
+                </legend>
+
+            <!--Text input for first name, last name, and facilitator name-->
+            <div id="rowA">
+                <label>First Name (required)</label>
+                <input type=text name="firstName" id="firstName" required autofocus placeholder="Enter First Name">
+                <p id="errorA"></p>
+            </div><br>
+
+            <div id="rowB">
+                <label>Last Name (required)</label>
+                <input type="text" name="lastName" id="lastName" required placeholder="Enter Last Name">
+                <p id="errorB"></p>
+            </div><br>
+
+            <div id="rowC">
+                <label>Facilitator (required)</label>
+                <input type=text name="facilitator" id="facilitator" required placeholder="Enter Fazil, Josh, or Chris">
+                <p id="errorC"></p>
+            </div><br>
+
+
+            <!--Radio buttons -->
+            <div id="classNumber">
+                <label><b>Please select the class you are currently enrolled in:</b></label><br>
+
+                <input type="radio" name="class" value="601" id="601"/>
+                <label for="601">CS 601 Web Application Development</label><br>
+
+                <input type="radio" name="class" value="669" id="669"/>
+                <label for="669">CS 669 Database Design and Implementation for Business</label><br>
+
+                <input type="radio" name="class" value="622" id="622"/>
+                <label for="622">CS 622 Advanced Programming Techniques in Java</label><br>
+
+                <input type="radio" name="class" value="526" id="526"/>
+                <label for="526">CS 526 Data Structures and Algorithms</label><br>
+            </div>
+
+            <!--Checkboxes-->
+            <div id="program">
+                <label><b>Please select the degree(s) you are pursuing:</b></label><br>
+
+                <label><input type="checkbox" name="program" value="MSSD" id="MSSD"/>Software Development</label><br>
+                <label><input type="checkbox" name="program" value="MSADA" id="MSADA"/>Applied Data Analytics</label><br>
+                <label><input type="checkbox" name="program" value="MSCIS" id="MSCIS"/>Information Systems</label><br>
+                <label><input type="checkbox" name="program" value="MSCS" id="MSCS">Computer Science</label><br>
+            </div>
+
+            <!--Submit button -->
+            <div>
+                <input type="submit" id="submit" value="Submit"/>
+                <p id="thanks"></p>
+            </div>
+        
+        </fieldset>
+        </form>
+        </div>
+
+        <div>
+        <a href="web_dev.html#center">
+            <div id = "circle" class="circle">&#8679</div>
+        </a>
+        </div>
+
+    </body>
+</html>

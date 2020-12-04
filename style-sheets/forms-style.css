@@ -1,0 +1,62 @@
+body {
+    background-image: url(../images/lance-anderson-NrDYqseeAxk-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#formWrapper{
+    width: 500px;
+    margin-left: 26%;
+    /* margin-top: 50px; */
+    padding: 10px;
+    background-color: rgb(241, 231, 223);
+    color:  rgb(46, 60, 94);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+#classNumber, #program{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#submit{
+    width: 80px;
+    height: 30px;
+    margin-left: 40%;
+    margin-top: 10px;
+    background-color: rgb(61, 81, 126);
+    text-align: center;
+    color: white;
+}
+
+#errorA, #errorB, #errorC {
+    color: red;
+}
+
+.circle {
+    height: 45px;
+    width: 45px;
+    background-color: rgb(241, 231, 223);
+    opacity: 0.8;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color:   #0b0827;
+    float:right;
+    position:fixed;
+    bottom: 10vh;
+    left: 10vw;
+    box-shadow: 0 4px 8px 0 #d9d9df33, 0 6px 20px 0 rgba(227, 227, 233, 0.3);
+  }
+
+  #thanks{
+      color: rgb(48, 48, 197);
+      text-align: center;
+      font-size: larger;
+      font-weight: bold;
+  }

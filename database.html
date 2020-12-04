@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>database project</title>
+            <link href="style-sheets/style_sheet_2.css" rel="stylesheet">
+            <link href="printstyle.css" rel="stylesheet" media="print">
+            <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+            <script src="events.js"></script>
+        </head>
+        <body>
+
+            
+                 <!--This is displayed as the header on all pages-->
+                <header id="top" class="home">
+
+                    <hgroup class = "title">
+                        <h1>Database Design</h1>
+                        <h2>and SQL</h2>
+                    </hgroup>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href = "home.html">home</a></li>
+                            <li><a href = "projects.html">projects</a>
+                                <ul>
+                                    <li><a href = "database.html">database design</a></li>
+                                    <li><a href = "python_3.html">python</a></li>
+                                    <li><a href = "java_project.html">java</a></li>
+                                    <li><a href = "structures_project.html">data structures and algorithms</a></li>
+                                    <li><a href = "web_dev.html">web development</a></li>
+                                </ul>
+                            </li>
+                            <li><a href = "skills.html">skills and resume</a></li>
+                            <li><a href = "personal.html">beyond programming</a></li>
+                        </ul>
+                            <div id="navbar" class="navbar">
+                                <div class="one"></div>
+                                <div class="two"></div>
+                                <div class="three"></div>
+                            </div>
+                    </nav>
+                    <img src = "images/alliance-football-club-2g7I-elXbl4-unsplash-copy.jpg" alt = "Lake Bled" class="large"/>
+                    
+                    <!--To the top button-->
+                   <a href="#top">
+                        <div id = "circle" class="circle">&#8679</div>
+                    </a>
+                
+                </header>
+                 <!--End of the header for all pages -->
+
+                <div id="wrapper" class = "wrapper-structures">
+                <section class = "description">
+                    <!--Introduction and brief description of the project-->
+                    <hgroup>
+                        <h1>Database Design and SQL</h1>
+                        <h2>A database designed for a Town Youth Soccer Club</h2>
+                    </hgroup>
+
+                    <p>Database contains 16 entities, 5 of which are in generalization/specialization 
+                        relationship and the rest are in associative relationships. The design contains 
+                        bridging entities where necessary to model M:N relationships. The database also 
+                        has a history table that tracks changes in fees for annual participation and 
+                        uniforms.
+                    </p>
+
+                    <p>SQL implementation includes stored procedures to populate tables as well as a 
+                        trigger that records changes of fees in the history table once the fee amount 
+                        changes. The project includes an Oracle SQL script that contains DDL to create 
+                        and populate tables and three sample queries that feature aggregate functions, 
+                        joins, and subqueries.
+                    </p>
+                </section>
+
+                <section class="description">
+                    <!--Demonstaration of the project and output examples -->
+                    <img src="images/under-construction.png" alt="Under construction sign" class="under_construct"/>
+                </section>
+
+            </div>
+        </body>
+    </html>

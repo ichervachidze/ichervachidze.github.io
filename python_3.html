@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>python project</title>
+            <link href="style-sheets/style_sheet_2.css" rel="stylesheet">
+            <link href="style-sheets/printstyle.css" rel="stylesheet" media="print">
+            <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+            <script src="events.js"></script>
+        </head>
+
+        <body>
+                 <!--This is displayed as the header on all pages-->
+                <header id="top" class="home">
+                    <hgroup class="title">
+                        <h1>Python 3</h1>
+                        <h2></h2>
+                    </hgroup>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href = "home.html">home</a></li>
+                            <li><a href = "projects.html">projects</a>
+                                <ul>
+                                    <li><a href = "database.html">database design</a></li>
+                                    <li><a href = "python_3.html">python</a></li>
+                                    <li><a href = "java_project.html">java</a></li>
+                                    <li><a href = "structures_project.html">data structures and algorithms</a></li>
+                                    <li><a href = "web_dev.html">web development</a></li>
+                                </ul>
+                            </li>
+                            <li><a href = "skills.html">skills and resume</a></li>
+                            <li><a href = "personal.html">beyond programming</a></li>
+                        </ul>
+
+                        <!--Navigation bar-->
+                        <div id="navbar" class="navbar">
+                            <div class="one"></div>
+                            <div class="two"></div>
+                            <div class="three"></div>
+                        </div>
+                    </nav>
+                    <img src = "images/alexander-shustov-OxzhYtL-00Y-unsplash.jpg" 
+                                    alt = "Bicycle leaning against the shed" class="large"/>
+
+                </header>
+                 <!--End of the header for all pages -->
+
+
+                <div id="wrapper" class = "wrapper-structures">
+                    <!--To the top button-->
+                    <a href="#top">
+                        <div id = "circle" class="circle">&#8679</div>
+                    </a>
+
+                <section class ="description">
+                    <!--Introduction and brief description of the project-->
+                    <hgroup>
+                         <h1>Python 3</h1>
+                         <h2>Listen and Spell Practice Program</h2>
+                    </hgroup>
+                    <p>The idea of the project is to practice spelling words grouped by a common rule. 
+                         Implementation includes several classes, assert statements to test instance methods, 
+                         i/o files with .txt and .json, and user input validation. This program uses a third 
+                         party library for sound playback easily installed through pip install. 
+                    </p>
+
+                    <p>The user is presented with a simple menu of lessons to practice, each 10 words long, 
+                        and can choose either one. Inside each lesson, the user is presented with a spoken word
+                        recorded by the narrator, and gets to spell it. At the end of each lesson, the user 
+                        receives a spelling score (a number of correctly spelled words).
+                    </p>
+
+                    <p>The program can be easily extended to include new custom lessons, collect commonly 
+                        misspelled words for further practice or download spelling lists. It can also be 
+                        extended into a mobile app.
+                    </p>
+                </section>
+
+
+                <section class ="description">
+                    <!--Demonstaration of the project and output examples -->
+                    <img src="images/under-construction.png" alt ="Under construction sign" class="under_construct"/>
+                </section>
+            </div>
+        </body>
+    </html>

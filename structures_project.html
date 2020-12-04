@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>data structures project</title>
+            <link href="style-sheets/style_sheet_2.css" rel="stylesheet">
+            <link href="style-sheets/printstyle.css" rel="stylesheet" media="print">
+            <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+            <script src="events.js"></script>
+        </head>
+
+
+        <body>
+                 <!--This is displayed as the header on all pages-->
+                <header id="top" class ="home">
+                    <hgroup class="title">
+                        <h1>Data Structures</h1>
+                        <h2>and Algorithms</h2>
+                    </hgroup>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href = "home.html">home</a></li>
+                            <li><a href = "projects.html">projects</a>
+                                <ul>
+                                    <li><a href = "database.html">database design</a></li>
+                                    <li><a href = "python_3.html">python</a></li>
+                                    <li><a href = "java_project.html">java</a></li>
+                                    <li><a href = "structures_project.html">data structures and algorithms</a></li>
+                                    <li><a href = "web_dev.html">web development</a></li>
+                                </ul>
+                            </li>
+                            <li><a href = "skills.html">skills and resume</a></li>
+                            <li><a href = "personal.html">beyond programming</a></li>
+                        </ul>
+                            <!--Navigation bar-->
+                            <div id="navbar" class="navbar">
+                                <div class="one"></div>
+                                <div class="two"></div>
+                                <div class="three"></div>
+                            </div>
+                    </nav>
+                    <img src = "images/omotayo-kofoworola-AzdEZdRec_0-unsplash-copy.jpg" 
+                            title = "Lagos, Nigeria" alt = "View of a city from above" class="large"/>
+
+                   
+                </header>
+                 <!--End of the header for all pages -->
+
+
+                <div id="wrapper" class = "wrapper-structures">
+                    <!--To the top button-->
+                    <a href="#top">
+                        <div id = "circle" class="circle">&#8679</div>
+                    </a>
+                <section class = "description"> 
+                    <!--Introdution and brief description of the project-->
+                    <hgroup>
+                         <h1>Data Structures and Algorithms</h1>
+                         <h2>Finding the shortest path in an undirected graph using heuristic algorithms</h2>
+                         <h3>Project idea and algorithms by Dr. Jay Lee; design and implementation in Java by me.</h3>
+                    </hgroup>
+                    <p> (Note: this project does not use Dijkstra's shortest path algorithm). This 
+                         program uses several data structures and relies heavily on OOP principles. Data 
+                         structures used: Java arrays, ArrayList, Stack, and a custom-created adjacency list graph. 
+                    </p>
+
+                    <div class="image-left-custom">
+                        <img src = "images/graph-small.png" alt ="undirected graph"/>
+                    </div>
+
+                    <p>The graph data is provided in a .txt file in a square matrix form, where each column/row 
+                        name represents a vertex (node) on the graph and the value at the intersection of the 
+                        row/column represents an edge (distance) between the nodes defined by the row name and 
+                        column name. The user inputs the start node (such as A or any other available node), 
+                        and the program recursively finds the shortest path to Z node using two algorithms. 
+                        It prints out the traversed path, the shortest path (those may differ depending on the 
+                        dead ends encountered) such as A => B => K => Z, and the total distance travelled for 
+                        each algorithm. The algorithms are programmed in such a way that if they reach a dead end, 
+                        they retrace the path back until they find an alternative node to follow. 
+                    </p>
+
+                   
+                    <p>The program can accommodate 26x26 size matrix input (graph), provided it is supplied in 
+                        the .txt file. User input validation is included, i.e. the user cannot enter a non-existent 
+                        starting point. The program can also be easily extended to specify any end vertex, not just Z. 
+                        Even though this feature is not part of the original project, the program is also capable 
+                        to “learn” the dead ends in the graph it encounters on the first traversal, so as to avoid 
+                        them altogether starting with the second traversal, thus making it more efficient.
+                    </p>
+                </section>
+
+                <section class= "description">
+                    <!--Demonstration of the program-->
+                    
+                    <p>Consider the following graph to the left. Suppose the starting point is node O. Remember that the 
+                        end point is always Z, colored green on the graph. We can easily eye ball the shortest path 
+                        to be O => N => M => U => V => X => Z.
+                    </p>
+
+                    <p>The program employs two algorithms to discover the shortest path. The first algorithm examines
+                        all nodes adjacent to the current node and chooses the one with the shortest direct distance to 
+                        Z. Note that the direct distance is not reflected in the graph above. It is a linear distance from
+                        the given node to Z and is supplied in a separate file. The second algorithm examines all nodes 
+                        adjacent to the current node and chooses the one with the smallest sum of direct distance and distance 
+                        between the current and next node. This will become more clear with the example below.
+                        Now if I run the program I get the following output:</p>
+                    <img src="images/output_from_O.png" alt= "console output for starting point O"/>
+
+                    <p>Now, let's examine the resulting shortest path from the first algorithm. Remember, our estimation of
+                        the shortest path was O => N => M => U => V => X => Z. Algorithm 1 gives us 
+                        O => N => T => U => V => W => Z. Recall that Algorithm 1 always chooses the node with the shortest 
+                        direct distance to Z, and, therefore, it chose to go from N to T (instead of M as we outlined) and from V to W 
+                        (instead of X). Algorithm 2 produces this shortest path: O => N => T => U => V => X => Z. The choice of T after
+                        N is explained here by the fact that the algorithm chooses the smallest sum of two distances (direct to Z 
+                        and between N and T). The calculation of shortest path length is straightforward.
+                    </p>
+
+                    <!--Case 1. Starting point at O-->
+                    <p> Now, let's look at the total path that both algorithms took to discover the shortest path. Both of them
+                        are quite lengthy, and save for the one before the last node, they are identical. The total path for 
+                        Algorithm 1 is O => P => Y => P => Q => R => Q => P => O => N => T => S => T => U => V => W => Z. The 
+                        choice to go to P from O is dictated by the fact that the direct distance from P to Z is shorter than form
+                        any other node adjacent to N. The algorithm is ignorant of the fact the P can only lead to a deadend. And so
+                        it follows down to Y and then discovers that Y is a deadend and retraces its move back to P. From P it goes
+                        down to Q because the only other choice is O and it was already visited. Again, the algorithm is unaware of
+                        the fact the Q can only lead to another deadend. From Q it goes to R, discovers that it is a deadend, and 
+                        retaces its moves all the way to O, the starting point. The choice here is G, N, and P. Since P has already
+                        been visited, the algorithm chooses between G and N. Since N is closer to Z in linear distance, it becomes
+                        the next node. From N it goes to T and then it has a choice between U and S. Since S is shorter in terms
+                        of its direct distance to Z, the algorithm chooses S, discovers that S is a deadend, and retraces its moves
+                        back to T. From T, the path of the algorithm is straightforward.
+                    </p>
+
+                    <p>I mentioned earlier that my program is capable of detecting deadends and therefore making the
+                        subsequent traversals more efficient. I have not tested the program enough to make this feature
+                        available, but as soon as I complete some tests, I plan to add an update here. 
+                    </p>
+
+                    <!--Case 2. Starting point at K-->
+                    <p>Finally, let's run the program again and select another starting point, such as K.</p>
+                    <img src = "images/output_from_K.png" alt= "console output for starting point K"/>
+                    <p>To find the shortest path, Algorithm 1 makes a loop around the whole upper part of the graph, 
+                        but eventually finds the path to Z. As one can see, finding and marking all deadends would
+                        really help making this algorithm more efficient. The same applies to Algorimth 2. 
+                    </p>
+                </section>
+
+            </div>
+        </body>
+    </html>

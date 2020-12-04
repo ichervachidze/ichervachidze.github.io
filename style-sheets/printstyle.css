@@ -1,0 +1,52 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    font-size: 16px;
+    color: black;
+
+}
+
+h2 {
+    font-size: 18px;
+}
+
+header {
+    display:none;
+}
+
+.items figure{
+    display:none;
+}
+
+.wrapper {
+    background-color: white;
+    margin-top: 50px;
+    width: auto;
+    height: auto;
+}
+
+#LinkedIn{
+    display:none
+}
+
+/* .description .image-left-custom{
+    display:block;
+    box-shadow: 0 0 0 0  white, 0 0 0 0 white;
+} */
+
+.description figure{
+    display:none;
+}
+
+.description .image-left-custom{
+    display: flex;
+    /* box-shadow: 0 0 0 0  white, 0 0 0 0 white; */
+    box-shadow: none;
+}
+
+.description .image-left{
+    display:none;
+}
+
+.under_construct{
+    display:none;
+}

@@ -1,0 +1,30 @@
+/*The CSS code for interactive three line button was borrowed from here:
+https://codingislove.com/three-line-navigation-bar/
+It was very useful in providing explanations and css (not html) code.*/
+
+.navbar {
+    float:right;
+    position:absolute;
+    /* top: 550px;
+    right: 50px; */
+    width: 60px;
+    display: block;
+    margin: 50px auto;
+    border: none;
+    padding: 8px 10px;
+    transition: all 0.5s;
+   -webkit-transition: all 0.5s;
+}
+
+.navbar div{
+    height: 5px;
+    background: #5f0d0d;
+    margin: 7px 0px 7px 0px;
+    border-radius: 25px;
+    transition: all 0.5s;
+   -webkit-transition: all 0.5s;
+}
+
+.two { width: 35px; }
+.three { width: 50px;}
+.navbar:hover div { width: 60px;}

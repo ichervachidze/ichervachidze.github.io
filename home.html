@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+            <meta charset="UTF-8">
+            <title>home</title>
+            <link href="style-sheets/style_sheet_2.css" rel="stylesheet">
+            <link href="style-sheets/printstyle.css" rel="stylesheet" media="print">
+            <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+            <script src="events.js"></script>
+        </head>
+
+
+        <body>
+                <!--Header for all pages -->
+                <header id="top" class="home">
+
+                    <hgroup class = "title">
+                        <h1>Iryna Chervachidze</h1>
+                        <h2> Portfolio</h2>
+                    </hgroup>
+                  
+                    <nav>
+                        <ul id="menu">
+                            <li><a href = "home.html">home</a></li>
+                            <li><a href = "projects.html">projects</a>
+                                <ul>
+                                    <li><a href = "database.html">database design</a></li>
+                                    <li><a href = "python_3.html">python</a></li>
+                                    <li><a href = "java_project.html">java</a></li>
+                                    <li><a href = "structures_project.html">data structures and algorithms</a></li>
+                                    <li><a href = "web_dev.html">web development</a></li>
+                                </ul>
+                            </li>
+                            <li><a href = "skills.html">skills and resume</a></li>
+                            <li><a href = "personal.html">beyond programming</a></li>
+                            
+                        </ul>
+                            <!--Navigation bar-->
+                            <div id="navbar" class="navbar">
+                                    <div class="one"></div>
+                                    <div class="two"></div>
+                                    <div class="three"></div>
+                            </div>
+                    </nav>
+                    <img src = "images/artem-sapegin-XGDBdSQ70O0-unsplash-copy.jpg" title="Lake Bled, Slovenia" alt = "Lake Bled" class="large"/>
+
+                    <!--End of the header for all pages -->
+                </header>
+
+            <div id = "wrapper" class = "wrapper">
+                <!--To the top button-->
+                <a href="#top">
+                    <div id = "circle" class="circle">&#8679</div>
+                </a>
+
+                <section class = "items">
+
+                    <!-- Projects section-->
+                    <article>
+                        <figure>
+                            <img src = "images/Brown_PR.png" alt="Letter PR on brown background" class="medium"/>
+                        </figure>
+                        <a href = "projects.html">
+                            <h2>Programming Projects</h2>
+                        </a>
+                            <p>Programming projects in Java, Python 3, Data Structures and Algorithms,
+                                Database Design</p>
+                    </article>
+
+                    <!-- Technical skills section-->
+                    <article>
+                        <figure>
+                            <img src = "images/Brown_TS.png" alt="Letters TS on brown background" class="medium"/>
+                        </figure>
+                            <a href = "skills.html">
+                                <h2>Technical Skills</h2>
+                            </a>
+                            <p>Programming languages, libraries, IDEs, and other useful skills</p>
+                    </article>
+                    
+
+                    <!--Personal section-->
+                    <article>
+                        <figure>
+                            <img src = "images/Brown_UA.png" alt="Letters UA on brown background" class="medium"/>
+                        </figure>
+                        <a href = "personal.html">
+                            <h2>Life Outside Software Development</h2>
+                        </a>
+                        <p>A quick tour of Ukraine, the country where I was born</p>
+                    </article>
+                    
+
+                </section>
+
+                <!--This is a sidebar that will apprear on all pages-->
+                <aside>
+                    <img src = "images/Iryna_Chervachidze_photo_web.jpg" alt = "Photo of Iryna Chervachidze"/>
+                    <p>Greetings! My name is Iryna Chervachidze. Welcome to my website!
+                        I am currently a graduate student at Boston University working towards MS in Software Development.
+                        This site contains descriptions of the projects I have completed in my program, with 
+                        this website being one of them. Please feel free to look around and stay a while!
+                    </p>
+                    
+                    <p id="LinkedIn">  
+                        <a href = "https://www.linkedin.com/in/iryna-chervachidze-021b711ab/">Connect on 
+                        <img src="images/LinkedIn-Logos/LI-Logo.png" alt="LinkedIn logo" class="logo"/>
+                        </a>
+                    </p>
+                </aside>
+                <footer></footer>
+            </div>
+        </body>
+    </html>
