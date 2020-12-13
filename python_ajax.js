@@ -66,7 +66,7 @@ function loadDoc(){
                 console.log("Progress = ", xhttp.readyState);
             }
         };
-        xhttp.open("GET", "http://ichervachidze.github.io/docs/words.json", true);
+        xhttp.open("GET", "https://ichervachidze.github.io/docs/words.json", true);
         xhttp.send();
 }
 
