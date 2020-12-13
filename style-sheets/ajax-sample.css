@@ -1,0 +1,72 @@
+body {
+    background-image: url("../images/lorenzo-spoleti-MlhJNEUQpBs-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#card{
+    width:70vw;
+    height:60vh;
+    background-color: rgba(63, 55, 36, 0.8);
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10vh;
+    margin-left: 15vw;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(228, 222, 211);
+}
+
+h1 {
+    font-size: 38px;
+}
+
+button {
+    width: 200px;
+    height: 60px;
+    margin-top: 10px;
+    background-color: rgb(46, 37, 23);
+    font-size: large;
+}
+
+
+table {
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 7vw ;
+    font-size: medium;
+}
+
+#table {
+    opacity: 0;
+}
+
+th, td {
+    padding: 3px 3px 3px 3px;
+}
+
+th{
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid rgb(211, 205, 205);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.circle {
+    height: 45px;
+    width: 45px;
+    background-color: rgba(63, 55, 36, 0.8);
+    opacity: 0.8;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color:   rgb(211, 205, 205);
+    float:right;
+    position:fixed;
+    bottom: 51vh;
+    left: 10vw;
+    box-shadow: 0 4px 8px 0 #d9d9df33, 0 6px 20px 0 rgba(227, 227, 233, 0.3);
+  }

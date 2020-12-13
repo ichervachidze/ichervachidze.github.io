@@ -1,0 +1,31 @@
+
+
+button {
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #2a3250;
+    font-size: medium;
+    color:white;
+}
+
+
+table {
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 7vw ;
+    font-size: medium;
+}
+
+#table_header{
+    color: #5f0d0d;
+    font-size: larger;
+    font-weight: bold;
+    border-bottom: 2px solid #5f0d0d;
+
+}
+
+th, td {
+    padding: 3px 3px 3px 3px;
+    text-align: center;
+}
