@@ -6,7 +6,19 @@ img.large{
 
 img.medium_big{
     width: 400px;
-    height: 250px;
+    height: 280px;
+}
+
+img.medium_java{
+    position: absolute;
+    width: 450px;
+    height: 320px;
+    z-index: 5;
+}
+
+img.big {
+    width: 600px;
+    height: 400px;
 }
 
 img.medium{
@@ -19,10 +31,27 @@ img.logo{
     height:25px
 }
 
+img.large-map{
+    position: absolute;
+    z-index: 5;
+}
+
+.under{
+    z-index:-1;
+}
+
 .image-left {
     float: left;
     width: 400px;
-    height:250px;
+    height:280px;
+    margin: 20px;
+
+}
+
+.image-java {
+    float: left;
+    width: 450px;
+    height:320px;
     margin: 20px;
 
 }
@@ -32,7 +61,28 @@ img.logo{
     width: 400px;
     height:507px;
     margin: 20px;
+}
 
+.image-left-erd {
+    float: left;
+    width: 626px;
+    height:640px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    background-image: url("../images/ERD.png");
+    background-size: cover;
+}
+
+.image-left-stored-procedure {
+    float: left;
+    width: 640px;
+    height:500px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    background-image: url("../images/Player_SP.png");
+    background-size: cover;
 }
 
 .img-right {
@@ -102,15 +152,7 @@ nav a:hover {
     font-weight: bold;
     text-decoration: none;
 }
-/* nav a:visited {
-    color: #5f0d0d;
-    text-decoration: none;
-} */
-/* nav a:active {
-    color: #5f0d0d;
-    font-weight: bold;
-    text-decoration: none;
-} */
+
 
 nav>ul{
     list-style:none;
@@ -122,10 +164,6 @@ nav>ul{
     /* display: none; */
 }
 
-/* nav li:hover ul {
-    display:block;
-    height:auto;
-    } */
 
 nav>ul>li {
     float:left; 
@@ -150,14 +188,8 @@ nav>ul>li>ul {
     right: 0px;
  }
  nav>ul>li>ul>li {
-    /* list-style:none; */
-    /* width: 140px; */
-    /* height:auto; */
-    /* padding: 15px; */
     margin-top: 15px;
-    /* display:none; */
-    /* position:absolute; */
-    /* right: 0px; */
+
  }
 
 nav li:hover ul {
@@ -165,29 +197,7 @@ nav li:hover ul {
     height:auto;
     }
 
-/* .top {
-    position:fixed;
-    top: 5px;
-    width: 1250px;
-    height: 80px;
-    background-color:  rgba(115, 101, 102, 0.6);
-} */
 
-/*.submenu_back{
-    position: fixed;
-    float: left;
-    top: 85px;
-    right: 300px;
-    width: 190px;
-    height: 180px;
-    background-color:  rgba(115, 101, 102, 0.6);
-    display: none;
-}*/
-
-/* nav li:hover .submenu_back {
-    display:block;
-    height: auto;
-} */
 
 .wrapper {
     background-color:  rgba(153, 147, 148, 0.6);
@@ -217,7 +227,7 @@ nav li:hover ul {
     background-color:  rgba(153, 147, 148, 0.6);
     margin-top: 50px;
     width: cover;
-    height: 2150px;
+    height: 2200px;
     padding: 40px;
     color: #3a3838;
     font-size: 16px;
@@ -409,3 +419,11 @@ tr:hover{
 .two { width: 35px; }
 .three { width: 50px;}
 .navbar:hover div { width: 60px;}
+
+.spelling_menu{
+    width:250px;
+    height:260px;
+    float:left;
+    margin-right: 10px;
+}
+

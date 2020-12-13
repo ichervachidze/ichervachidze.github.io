@@ -48,13 +48,11 @@ window.addEventListener("DOMContentLoaded", () =>{
         if (firstNameFlag == false || 
             lastNameFlag == false || 
             facilitatorFlag == false){
-            // event.preventDefault();
         }
 
-        if (firstNameFlag == true || 
-            lastNameFlag == true || 
+        if (firstNameFlag == true && 
+            lastNameFlag == true && 
             facilitatorFlag == true){
-                // event.preventDefault();
                 document.getElementById("thanks").innerHTML = 
                 "Success! Thank you for filling out the form!";
             }

@@ -18,19 +18,33 @@ img.medium{
 img.card-size{
     width: 400px;
     height: 500px;
-    opacity: 0.6;
+    /* opacity: 0.6; */
 }
 
+img.ajax-image{
+    width: 550px;
+    height: 400px;
+    /* opacity: 0.6; */
+}
 
 .card{
     width: 45vw;
-    height: 90vh;
-    margin-top: 3vh;
+    height: 70vh;
+    margin-top: 10vh;
     margin-left: 5vw;
     margin-right: 5vw;
     margin-bottom: 2vh;
     text-align: center;
-    padding-top: 10vh;
+
+}
+
+.card article{
+    width:400px;
+    height:500px;
+    background-color: rgb(164, 167, 141);
+    opacity: 0.6;
+    text-align: center;
+    /* padding-top: 10px; */
 }
 
 .one{
@@ -38,6 +52,11 @@ img.card-size{
     height: 100vh;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+}
+
+.four{
+    width: 50vw;
+
 }
 
 nav a {
@@ -108,15 +127,6 @@ nav li:hover ul{
     transform-origin: top left;
 }
 
-.two{
-    /* background-color: rgb(223, 240, 204); */
-}
-.three{
-    /* background-color: rgb(103, 101, 212); */
-}
-.four{
-    /* background-color: rgb(186, 190, 146); */
-}
 
 .outer-wrapper{
     width: 100vh;
@@ -138,6 +148,7 @@ body{
     background-image: url("../images/lance-anderson-NrDYqseeAxk-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .title {

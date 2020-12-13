@@ -6,6 +6,7 @@
             <link href="style-sheets/style_sheet_2.css" rel="stylesheet">
             <link href="style-sheets/printstyle.css" rel="stylesheet" media="print">
             <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/vue"></script>
             <script src="events.js"></script>
         </head>
 
@@ -33,7 +34,7 @@
                                 </ul>
                             </li>
                             <li><a href = "skills.html">skills and resume</a></li>
-                            <li><a href = "personal.html">beyond programming</a></li>
+                            <li><a href = "personal_vue.html">beyond programming</a></li>
                         </ul>
 
                     <!--Navigation bar-->
@@ -44,7 +45,8 @@
                         </div>
                     
                     </nav>
-                    <img src = "images/guy-basabose-FzdEbrA3Qj0-unsplash.jpg" alt = "Cup of Cappuccino" class="large"/>                                  
+                    <img src = "images/anni-denkova-1GmAWAgBAxc-unsplash.jpg" 
+                            title = "Java, Indonesia" alt = "Mountain range in Java, Indonesia" class="large"/>                                  
                 
                 </header>
                  <!--End of the header for all pages -->
@@ -65,28 +67,117 @@
                             handling, Junit tests, JDBC with SQL Lite</h3>
                     </hgroup>
 
-                    <p>This project simulates activity of a small school supply store. Supply side 
-                        is represented by the class Shop that controls the shop’s inventory. Inventory 
-                        items are stored in a SQLLite database. The demand side of the simulation is
+                    <p>This project simulates economic activity of a small school supply store. The idea behind this
+                        simulation allowed me to combine my background in Economics as well as my love of programming.
+                        As about anything in Economics, this project relies on a number of assumtions. I will mention them
+                        further in the text as they become relevant to the story.
+                    </p>
+                    
+                    <p><b>Supply side</b> is represented by the class Shop that controls the shop’s inventory. 
+                        Initially 
+                        inventory items are stored in .txt files and loaded at the start of the program. 
+                        <b>The demand side</b> of the simulation is
                          represented by the generic class Customer. Customer’s buying preferences 
                          may vary from items belonging to a particular class (such as Book or Supplies) 
                          to items of certain category (math, science, language arts, history). To 
-                         introduce some uncertainty into the simulation, customer preferences are chosen at 
+                         introduce some uncertainty into the simulation, <b>customer preferences</b> are chosen at 
                          random. 
                     </p>
 
-                    <p>To experiment with multiple threads, I created two shops that run concurrently, 
-                        each in its own thread.  Simulation runs for 30 logical days and then prints out 
+                    <div class="image-java">
+                        <img :src = "logical_day" 
+                            alt = "Console output" 
+                            @click="revealDay2"
+                            
+                            class="medium_java"/>
+                    </div>
+
+                    <p>This project was completed in several iterations over the course of the 6 week class. 
+                        In the first several iterations, all inventory items are loaded into a hashmap structure that maps 
+                        a key to a every item in the inventory. Customer's participation is determined by a random
+                        variable between 0 and 1. If the value of that variable is greater than .5 for a given (logical day) 
+                        than the program
+                        creates an instance of a Customer with a randomly assigned buying preference and budget. Customer's
+                        buying preference determines what set of items the customer is going to spend his budget on. <b>Buying
+                        choices</b> within that set are also determined randomly. The assumption is that the Customer is willing to 
+                        spend as much of his budget as possible without going over the budget.
+                    </p>
+
+                    <p>Simulation runs for <b>30 logical days</b> and then haults. The user can then choose to 
+                        continue for another 30 days or quit. 
+                        A typical run for a logical day may look like the one above. If the customer was created
+                        the program specifies what preference and budget were assigned to that customer. Then the 
+                        program lists the number of items that the customer bought in the store. I had an idea to
+                        implement a system of related items purchases where the customer is more likely to buy
+                        items related to each other, such as math textbook and math workbook. Unfortunately, I did not have
+                        enough time to put this system in place.
+                    </p>
+
+                    <div class="image-java">
+                        <img src = "images/concurrentShops.png" 
+                            alt = "Console output" 
+                            class="medium_java"
+                            :style = "{width: outputWidth +'px', height:outputHeight +'px'}"
+                            @mouseover = "bigOutput"
+                            @mouseleave = "hideBigOutput"/>
+                    </div>
+
+                    <p><b>Restocking warning</b> seen above represents low inventory. The program set a certain
+                        threshold for inventory items. If the available quantity of any item would
+                        fall below that level, the inventory would issue a restocking warning and restock
+                        those particular items. If you click over the output above, you will see the output 
+                        for two other days. Notice that day 26 has no sales because there were no customers on that day.
+                    </p>
+
+                    
+
+                    <p class="under">To experiment with multiple threads, I created two shops that run concurrently, 
+                        each in its own thread. Simulation still runs for 30 logical days and then prints out 
                         the report about the sales, profits and top ten items most in demand for that 
-                        period. The user has a choice to continue simulation at that point or quit. 
+                        period. I used locks to print out the reports so that results of the simulation are
+                        displayed together for each shop. You can see a sample output on the left.
+                    </p>
+
+                    <p>For the last iteration, we experimented with JDBC and SQLLite. I created a 
+                        small database that contained the inventory items and ran several SQL queries.
                     </p>
                 </section>
 
-                <section class="description">
-                    <!--Demonstaration of the project and output examples -->
-                    <img src="images/under-construction.png" alt ="Under construction sign" class="under_construct"/>
-                </section>
-
+                
             </div>
+            <script>
+                var app = new Vue({
+                    el:"#wrapper",
+                    data: {
+                         logical_day: "images/Java_logical_day.png",
+                         outputWidth: "450",
+                         outputHeight: "320",
+                    },
+
+                    methods: {
+                        revealDay2: function(){
+                             console.log("java output is clicked");
+                             this.logical_day = "images/Java_logical_day2.png";
+                        },
+
+                        hideDay2: function(){
+                             console.log("away from java output");
+                             this.logical_day = "images/Java_logical_day1.png";
+                        },
+
+                        bigOutput: function(){
+                            console.log("concurrent output is hovered");
+                            this.outputWidth = "560";
+                            this.outputHeight = "400";
+                        },
+
+                        hideBigOutput: function(){
+                            console.log("away from concurrent output");
+                            this.outputWidth = "450";
+                            this.outputHeight = "320";
+                        }
+                    }
+                })
+            </script>
         </body>
     </html>

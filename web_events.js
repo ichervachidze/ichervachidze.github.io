@@ -1,13 +1,23 @@
 window.addEventListener("DOMContentLoaded", () =>{
     console.log("DOM loaded and parsed");
 
-// document.getElementById("wrapper").addEventListener("mouseenter", function() {
-//     document.getElementById("circle").style.opacity = 0.6;
-// });
+    // $("#card-one").mouseleave(function(){
+    //   console.log("inside fading function");
+      
+    //   // $("#navbar").fadeOut(500);
+    //   // $("#web-title").fadeOut(500);
+    //   $("#menu").fadeOut();
 
-// document.getElementById("top").addEventListener("mouseenter", function() {
-//     document.getElementById("circle").style.opacity = 0;
-// });
+    // });
+
+    // $("#card-one").mouseenter(function(){
+    //   console.log("inside emerging function")
+      
+    //   $("#navbar").fadeIn(500);
+    //   $("#web-title").fadeIn(500);
+    //   // $("#menu").fadeOut(500);
+
+    // });
 
 function sleep(milliseconds) {
     const date = Date.now();
@@ -37,16 +47,6 @@ document.getElementById("navbar").addEventListener("click", function() {
 
     });
 
-  document.getElementById("card_two").addEventListener("mouseenter", function() {
-      console.log("Over the card two currently.")
-      document.getElementById("card_two").style.opacity = 1;
-      // document.getElementById("card_two").style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3)";
-    });
 
-    document.getElementById("card_two").addEventListener("mouseleave", function() {
-      console.log("Out of the card two currently.")
-      document.getElementById("card_two").style.opacity = 0.6;
-      // document.getElementById("card_two").style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3)";
-    });
 
 });

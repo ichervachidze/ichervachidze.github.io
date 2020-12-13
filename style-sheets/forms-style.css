@@ -49,8 +49,8 @@ h1{
     color:   #0b0827;
     float:right;
     position:fixed;
-    bottom: 10vh;
-    left: 10vw;
+    bottom: 51vh;
+    left: 20vw;
     box-shadow: 0 4px 8px 0 #d9d9df33, 0 6px 20px 0 rgba(227, 227, 233, 0.3);
   }
 

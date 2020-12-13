@@ -6,19 +6,21 @@
         <link href="style-sheets/web-dev.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
         <link href="style-sheets/forms-style.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="web_events.js"></script>
     </head>
 
     <body>
         <div class="outer-wrapper">
          
-        <div class="scrolling-wrapper">
+        <div class="scrolling-wrapper" id="scrolling-wrapper">
             <div id="navbar" class="navbar">
                 <div class="uno"></div>
                 <div class="dos"></div>
                 <div class="tres"></div>
             </div>
-            <div class="card one">
+            <div class="card one" id="card-one">
                 <nav>
                     <ul id="menu">
                         <li><a href = "index.html">home</a></li>
@@ -32,37 +34,88 @@
                             </ul>
                         </li>
                         <li><a href = "skills.html">skills and resume</a></li>
-                        <li><a href = "personal.html">beyond programming</a></li>
+                        <li><a href = "personal_vue.html">beyond programming</a></li>
                         
                     </ul>
                     
                 </nav><br>
 
-                <hgroup class = "title">
+                <hgroup class = "title" id="web-title">
                     <h1>Web Development</h1>
                     <h2>Samples</h2>
                 </hgroup>
             </div>
-
+            
 
             <div class="card two" id="center">
                 <a href = "forms_main.html">
-                <figure>
-                    <img src = "images/forms-images.png" alt="Letter PR on brown background" id="card_two" class="card-size"/>
-                </figure>
+                    <figure>
+                        <img src = "images/forms-images.png" 
+                        alt="Sample of a form" 
+                        id="card_two" 
+                        class="card-size"
+                        :style="{opacity: opacityTwo}"
+                        @mouseover="makTwoSolid"
+                        @mouseleave="makeTwoTransparent"/>
+                    </figure>
                 </a>
             </div>
-            <div class="card three">
-                <figure>
-                    <img src = "images/Brown_UO.png" alt="Letter PR on brown background" class="medium"/>
-                </figure>
+            
+            <div class="card four" id="center1">
+                <a href = "ajax_sample.html">
+                    <figure>
+                        <img src = "images/Ajax.png" 
+                        alt="Table with a piano in backgroud" 
+                        id="card_four" 
+                        class="ajax-image"
+                        :style="{opacity: opacityFour}"
+                        @mouseover="makeFourSolid"
+                        @mouseleave="makeFourTransparent"/>
+                    </figure>
+                </a>
             </div>
-            <div class="card four">
-                <figure>
-                    <img src = "images/Brown_UO.png" alt="Letter PR on brown background" class="medium"/>
-                </figure>
+
+            <!-- <div class="card three">
+                <article>
+                    <h1>Samples for Wev Dev</h1>
+                    <p>This site was build by me as a term project for CS 601 class on Web Development. I used
+                        html, css and plain JavaScript for the most part of this site. I also sprinkled a few
+                        Vue.js </p>
+                </article>
             </div>
-        </div>
-        </div>
+        -->
+
+        <script>
+            const app = new Vue({
+                el:"#scrolling-wrapper",
+                data: {
+                    opacityTwo: '0.6',
+                    opacityFour: '0.6',
+                },
+
+                methods: {
+                    makTwoSolid: function() {
+                        console.log("inside makeSolid function")
+                        this.opacityTwo = '1';
+                    },
+
+                    makeTwoTransparent: function() {
+                        console.log("inside makeTransparent function")
+                        this.opacityTwo = '0.6';
+                    },
+
+                    makeFourSolid: function() {
+                        console.log("inside makeSolid function")
+                        this.opacityFour = '1';
+                    },
+
+                    makeFourTransparent: function() {
+                        console.log("inside makeTransparent function")
+                        this.opacityFour = '0.6';
+                    }
+                }
+
+            })
+        </script>
     </body>
 </html>

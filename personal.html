@@ -6,6 +6,7 @@
             <link href="style-sheets/style_sheet_2.css" rel="stylesheet">
             <link href="printstyle.css" rel="stylesheet" media="print">
             <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/vue"></script>
             <script src="events.js"></script>
         </head>
         <body>
@@ -75,9 +76,12 @@
 
                     <article>
                     <!--This section contains information about seasons in Ukraine-->
-                        <div class="image-left">
-                            <img src = "images/alex-basov-BinWPolj9jk-unsplash.jpg" alt = "Chestnut trees in Kiev" class="medium_big"/>
-                        </div>
+                    <div class="image-left">
+                        <img :src = "chestnutsImage"
+                            @mouseover = "revealWinter"
+                            @mouseleave = "hideWinter"
+                            class="medium_big"/>
+                    </div>
                         <p>Ukraine enjoys four seasons, and all of them reveal something beautiful about this country. 
                             I grew up in the city of Kiev, the capital of Ukraine. In the spring, it is famous for its
                             blooming chestnut trees which line up pretty much every major street in Kiev. Here, on the left, 
@@ -92,9 +96,13 @@
 
                     <article>
                     <!--This section contains information about food in Ukraine-->
-                        <div class="image-left">
-                            <img src = "images/Borscht-1.jpg" alt = "Ukrainian borsch" class="medium_big"/>
-                        </div>
+                    <div class="image-left">
+                        <img :src = "borsch" 
+                            alt = "Ukrainian borsch" 
+                            class="medium_big"
+                            @mouseover = "revealBread"
+                            @mouseleave = "hideBread"/>
+                    </div>
                         <p> No conversation about Ukraine is complete without the mention of food ... Mmmm, the food in
                             Ukraine, I really miss it... Kiev is probably one of the best places to try out different cuisines. 
                             Compared to Western Europe, culinary explorations is Kiev will be very inexpensive, but very high 
@@ -185,5 +193,54 @@
                </section>
                
                </div>
+
+               <script>
+                var app = new Vue({
+                    el:"#app",
+                    data: {
+                         mapWidth:'400',
+                         mapHeight: '280',
+                         chestnutsImage: "images/alex-basov-BinWPolj9jk-unsplash.jpg",
+                         borsch: "images/Borsch-1.jpg"
+                    },
+
+                
+                    methods: {
+                        revealBig: function(){
+                             console.log("map is hovered");
+                             this.mapWidth ='600';
+                             this.mapHeight= '350';
+                        },
+
+                        hideBig: function(){
+                             console.log("away from map");
+                             this.mapWidth ='400';
+                             this.mapHeight= '280';
+                        },
+
+                        revealWinter: function(){
+                            console.log("chestnuts hovered");
+                            this.chestnutsImage= "https://www.roadiscalling.com/wp-content/uploads/2019/01/things-to-do-in-kiev-in-winter-2.jpg";
+                        },
+
+                        hideWinter: function(){
+                            console.log("out of winter");
+                            this.chestnutsImage= "images/alex-basov-BinWPolj9jk-unsplash.jpg";
+                        },
+
+                        revealBread: function(){
+                            console.log("borsch hovered");
+                            this.borsch = "https://ukrainian-recipes.com/wp-content/uploads/2019/11/Ukrainian-bread-in-the-Hutsul-culture2.jpg"
+                        },
+
+                        hideBread: function(){
+                            console.log("away from bread");
+                            this.borsch = "images/Borsch-1.jpg"
+                        }
+                    }
+
+
+                })
+            </script>
         </body>
     </html>

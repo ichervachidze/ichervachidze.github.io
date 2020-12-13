@@ -6,7 +6,9 @@
             <link href="style-sheets/style_sheet_2.css" rel="stylesheet">
             <link href="style-sheets/printstyle.css" rel="stylesheet" media="print">
             <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-            <script src="events.js"></script>
+            <link href="style-sheets/ajax.css" rel="stylesheet">
+            <script src="python_ajax.js"></script>
+            
         </head>
 
         <body>
@@ -29,7 +31,7 @@
                                 </ul>
                             </li>
                             <li><a href = "skills.html">skills and resume</a></li>
-                            <li><a href = "personal.html">beyond programming</a></li>
+                            <li><a href = "personal_vue.html">beyond programming</a></li>
                         </ul>
 
                         <!--Navigation bar-->
@@ -39,8 +41,8 @@
                             <div class="three"></div>
                         </div>
                     </nav>
-                    <img src = "images/alexander-shustov-OxzhYtL-00Y-unsplash.jpg" 
-                                    alt = "Bicycle leaning against the shed" class="large"/>
+                    <img src = "images/marketa-marcellova-Bjm9JmpNfd0-unsplash.jpg" 
+                                    alt = "Green python in a tree" class="large"/>
 
                 </header>
                  <!--End of the header for all pages -->
@@ -58,13 +60,16 @@
                          <h1>Python 3</h1>
                          <h2>Listen and Spell Practice Program</h2>
                     </hgroup>
-                    <p>The idea of the project is to practice spelling words grouped by a common rule. 
+
+                    <img src="images/spelling_menu.png" class="spelling_menu">
+                    <p>My first programming project. The idea of the project is to practice spelling words grouped by a common rule. 
                          Implementation includes several classes, assert statements to test instance methods, 
                          i/o files with .txt and .json, and user input validation. This program uses a third 
                          party library for sound playback easily installed through pip install. 
                     </p>
 
-                    <p>The user is presented with a simple menu of lessons to practice, each 10 words long, 
+                    <!-- <img src="images/spelling_menu.png" class="spelling_menu"> -->
+                    <p>The user is presented with a simple console menu of lessons to practice, each 10 words long, 
                         and can choose either one. Inside each lesson, the user is presented with a spoken word
                         recorded by the narrator, and gets to spell it. At the end of each lesson, the user 
                         receives a spelling score (a number of correctly spelled words).
@@ -76,11 +81,18 @@
                     </p>
                 </section>
 
-
-                <section class ="description">
-                    <!--Demonstaration of the project and output examples -->
-                    <img src="images/under-construction.png" alt ="Under construction sign" class="under_construct"/>
-                </section>
-            </div>
-        </body>
+                <div id=card>
+                    <h2>Sample of spelling words grouped by a common rule</h2>
+                    <button id="json_button">retrieve using AJAX</button>
+        
+                    <table id="table">
+                        <thead id="table_header">
+                          
+                        </thead>
+        
+                        <tbody id="table_body">
+                            
+                        </tbody>
+                    </table>
+           </body>
     </html>
