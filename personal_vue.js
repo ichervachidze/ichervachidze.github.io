@@ -19,25 +19,25 @@ function sleep(milliseconds) {
     } while (currentDate - date < milliseconds);
   }
 
-document.getElementById("navbar").addEventListener("click", function() {
+// document.getElementById("navbar").addEventListener("click", function() {
    
-    console.log("navbar clicked");
+//     console.log("navbar clicked");
     
-    const children = document.getElementById("menu").children;
-    console.log("found children");
-        for (const child of children) {
-        console.log(child.innerText);
-        child.style.opacity = 0;
-    }
-    document.getElementById("menu").style.display = "block";
+//     const children = document.getElementById("menu").children;
+//     console.log("found children");
+//         for (const child of children) {
+//         console.log(child.innerText);
+//         child.style.opacity = 0;
+//     }
+//     document.getElementById("menu").style.display = "block";
 
-    for (const child of children) {
-        console.log("showing: " + child.innerText);
-        child.style.opacity = 1;
-        sleep(0);
-    }
+//     for (const child of children) {
+//         console.log("showing: " + child.innerText);
+//         child.style.opacity = 1;
+//         sleep(0);
+//     }
 
-    });
+//     });
 document.getElementById("top").addEventListener("wheel", function() {
     document.getElementById("menu").style.display = "none";
 });
