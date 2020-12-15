@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Me</title>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+        <!-- <link href="style-sheets/forms-style.css" rel="stylesheet"/> -->
+        <!-- <link href="./style-sheets/style_sheet_2.css" rel="stylesheet"> -->
+        <link href="style-sheets/contact.css" rel="stylesheet">
+        <script src="contact.js"></script>
+        <!-- <script src="events.js"></script> -->
+    </head>
+
+    <body>
+
+        <div class="grid-container">
+            <div class="item1">
+                <nav id="menu">
+                    <div class="menu_option">
+                        <a href = "index.html">home</a>
+                    </div>
+    
+                    <div class="menu_option">
+                        <a href = "projects.html" id="projectRef">projects</a>
+                        <ul id="submenu">
+                            <li><a href = "database.html">database design</a></li>
+                            <li><a href = "python_3.html">python</a></li>
+                            <li><a href = "java_project.html">java</a></li>
+                            <li><a href = "structures_project.html">data structures and algorithms</a></li>
+                            <li><a href = "web_dev.html">web development</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="menu_option">
+                        <a href = "skills.html">skills and resume</a>
+                    </div>
+    
+                    <div class="menu_option">
+                        <a href = "personal_vue.html">beyond programming</a>
+                    </div>
+    
+                    <div class="menu_option">
+                        <a href = "contact.html">contact</a>
+                    </div>
+                </nav>
+
+            </div>
+            <div class="item2">
+                <!-- <div id="formWrapper"> -->
+                    <h1 id="title">Contact Me</h1>
+                <form name="contactForm" id="contactForm" method="post" novalidate>
+                    <fieldset id="field">
+                        <legend>
+                            <b>Please fill out these fields:</b>
+                        </legend>
+        
+                    <!--Text input for first name, last name, and email-->
+                    <div id="rowA">
+                        <label>First Name (required)</label>
+                        <input type=text name="firstName" id="firstName" required autofocus placeholder="Enter your first name">
+                        <p id="errorA"></p>
+                    </div><br>
+        
+                    <div id="rowB">
+                        <label>Last Name (required)</label>
+                        <input type="text" name="lastName" id="lastName" required placeholder="Enter your last name">
+                        <p id="errorB"></p>
+                    </div><br>
+        
+                    <div id="rowC">
+                        <label>Email (required)</label>
+                        <input type=email name="email" id="email" required placeholder="name@email.com">
+                        <p id="errorC"></p>
+                    </div><br>
+        
+                    <div id="rowD">
+                        <label>Message (up to 140 characters)</label>
+                        <textarea name="textArea" id="textAreat" placeholder="Enter your message here"></textarea>
+                            <span id="charCount" class ="charCount"></span>
+                    </div><br>
+         
+                    
+                    <!--Submit button -->
+                    <div>
+                        <input type="submit" id="submit" value="Submit"/>
+                        <p id="thanks"></p>
+                    </div>
+                
+                </fieldset>
+                </form>
+                <!-- </div> -->
+            </div>
+        </div>
+    </body>
+</html>

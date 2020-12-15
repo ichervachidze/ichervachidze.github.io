@@ -1,0 +1,126 @@
+* {
+    font-family: Arial, 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-family: 'Cascadia Code';
+    font-family: "BahnSchrift Light";
+    font-family: "Comfortaa";
+}
+
+
+
+.item1 { 
+    grid-area: navig;
+    margin: 5vh 0 5vh 0;
+}
+.item2 { 
+    grid-area: contactForm;
+    margin-top: 8vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'navig'
+      'contactForm';
+    grid-gap: 20px;
+    padding: 10px;
+  }
+
+body {
+    background-image: url("../images/retrosupply-jLwVAUtLOAQ-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3vw;
+}
+
+a:hover {
+    color: rgba(177, 199, 166, 0.85);
+    font-weight: bolder;
+}
+
+#menu{
+    margin-left: 20vw;
+    /* margin-top: 5vh; */
+}
+
+.menu_option{
+    float:left;
+    position:relative;
+    margin-left: 5vw;
+   
+}
+
+ul{
+    list-style: none;
+    position:absolute;
+    margin-top: -1px;
+    width: auto;
+    height: auto;
+    padding-inline-start: 0px;
+    left: -1.4vw;
+    text-align: center;
+}
+
+ul>li{
+    /* padding-bottom: 10px; */
+    margin-top: 2vh;
+    height:auto;
+}
+
+
+#submenu{
+    display:none;
+}
+
+/* #menuOption a:hover #submenu{
+    display: block;
+    height: auto;
+} */
+
+#title{
+    float:left;
+    width:95vw;
+    text-align: center;
+    /* margin-top: 5vh; */
+    color:rgb(165, 161, 141);
+}
+
+#contactForm{
+    padding: 5px 5px 5px 5px;
+    margin-left: 23vw;
+    width: 50vw;
+    background-color: rgba(19, 27, 26, 0.85);
+    color:rgb(165, 161, 141);
+}
+
+fieldset{
+    padding: 20px 20px 20px 20px;
+}
+
+#errorA, #errorB, #errorC {
+    color:red;
+
+}
+
+#submit{
+    width:80px;
+    height:30px;
+    background-color: rgb(165, 161, 141);
+    margin-left: 40%;
+    margin-top:5%;
+    color:rgba(19, 27, 26);
+    font-weight: bold;
+}
+
+#thanks{
+    text-align: center;
+    color: rgb(142, 192, 101);
+    font-weight: bold;
+}
+
+
+  
