@@ -38,9 +38,9 @@ function sleep(milliseconds) {
 //     }
 
 //     });
-document.getElementById("top").addEventListener("wheel", function() {
-    document.getElementById("menu").style.display = "none";
-});
+// document.getElementById("top").addEventListener("wheel", function() {
+//     document.getElementById("menu").style.display = "none";
+// });
 
 
 });
