@@ -10,7 +10,6 @@
         </head>
         <body>
 
-            
                  <!--This is displayed as the header on all pages-->
                 <header id="top" class="home">
 
@@ -40,7 +39,9 @@
                                 <div class="three"></div>
                             </div> -->
                     </nav>
-                    <img src = "images/alliance-football-club-2g7I-elXbl4-unsplash-copy.jpg" alt = "Lake Bled" class="large"/>
+                    <img src = "images/alliance-football-club-2g7I-elXbl4-unsplash-copy.jpg" 
+                         alt = "Boys plays soccer" 
+                         class="large"/>
                     
                 </header>
                 <!--End of the header for all pages -->   
@@ -52,71 +53,70 @@
                 
                 
 
-                <div id="wrapper" class = "wrapper-structures">
-                <section class = "description">
+                <div id="wrapper" class = "wrapper-with-back">
+                
                     <!--Introduction and brief description of the project-->
                     <hgroup>
                         <h1>Database Design and SQL</h1>
                         <h2>A database designed for a Town Youth Soccer Club</h2>
                     </hgroup>
 
-                    <div class="image-left-erd">
-                        <!-- <img src = "images/ERD.png" alt ="Entity relationship diagram"/> -->
-                    </div>
+                    <div class="text">
+                    
+                        <p>This database was created for the use of managers and coaches of a Town Youth Soccer
+                            Club. The <b>use cases</b> include creating an account for the user (managers, coaches, parents
+                            of players), entering and storing information on the players and other participants (see
+                            Person entity), as well as entering attendence and grading each player's skill set for each
+                            practice. 
+                        </p>  
 
-                    <p>This database was created for the use of managers and coaches of a Town Youth Soccer
-                        Club. The <b>use cases</b> include creating an account for the user (managers, coaches, parents
-                        of players), entering and storing information on the players and other participants (see
-                        Person entity), as well as entering attendence and grading each player's skill set for each
-                        practice. Documentation includes all business rules necessary for modeling entity relationships.
-                        A few more entities may be easily incorporated into the structure, such as travel
-                        games that would record the games played by the players of the current town club with other
-                        towns. Such relationship would have a M to N associative relationship with the player and 
-                        therefore would require a bridging entity.
-                    </p>
+                        <img src = "images/ERD.png" 
+                        alt ="Entity relationship diagram"
+                        width = "624"
+                        height ="636"
+                        class = "image-database"/>  
 
-                    <p>Database contains 16 entities, 5 of which are in generalization/specialization 
-                        relationship and the rest are in associative relationships. The design contains 
-                        bridging entities where necessary to model M:N relationships. The database also 
-                        has a history table that tracks changes in fees for annual participation and 
-                        uniforms.
-                    </p>
+                        <p>Documentation includes all business rules necessary for modeling entity relationships.
+                            A few more entities may be easily incorporated into the structure, such as travel
+                            games that would record the games played by the players of the current town club with other
+                            towns. Such relationship would have a M to N associative relationship with the player and 
+                            therefore would require a bridging entity.
+                        </p>
 
-                    <p><b>Entity Relationship Diagram (ERD)</b> above captures the structure of the database.
-                        The diagram uses traditional UML style for outlining the relationships. 
-                        <b>Specialization/generalization</b> hierarchy is represented by Person supertype and two
-                        layers of subtypes. A Person can be either a Parent or a Player, but not both, hence
-                        the relationship is {mandatory, or}. Next level down, a Parent is a supertype for 
-                        both Coach and Manager (since both positions are filled by parent-volunteers). A parent 
-                        does not have to fill any of the positions for his child to play in the club. Therefore
-                        the relationship is {optional, and}.
-                    </p>
+                        <p>Database contains 16 entities, 5 of which are in generalization/specialization 
+                            relationship and the rest are in associative relationships. The design contains 
+                            bridging entities where necessary to model M:N relationships. The database also 
+                            has a history table that tracks changes in fees for annual participation and 
+                            uniforms.
+                        </p>
 
-                    <div class="image-left-stored-procedure">
-                        <!-- <img src = "images/Player_SP.png" alt ="Entity relationship diagram"/> -->
-                    </div>
-                           
+                        <p><b>Entity Relationship Diagram (ERD)</b> above captures the structure of the database.
+                            The diagram uses traditional UML style for outlining the relationships. 
+                            <b>Specialization/generalization</b> hierarchy is represented by Person supertype and two
+                            layers of subtypes. A Person can be either a Parent or a Player, but not both, hence
+                            the relationship is {mandatory, or}. Next level down, a Parent is a supertype for 
+                            both Coach and Manager (since both positions are filled by parent-volunteers). A parent 
+                            does not have to fill any of the positions for his child to play in the club. Therefore
+                            the relationship is {optional, and}.
+                        </p>
 
-                    <p>SQL implementation includes stored procedures to populate tables as well as a 
-                        trigger that records changes of fees in the history table once the fee amount 
-                        changes. The project includes an Oracle SQL script that contains DDL to create 
-                        and populate tables and three sample queries that feature aggregate functions, 
-                        joins, and subqueries. A sample stored procedure is given here. It populates the table
-                        Player. Since Player is a subtype of the Person entity, the procedure needs to update
-                        both tables with the data. I also created stored procedures for populating Person,
-                        Coach, and Payment tables. SQL script contains all these and additional procedures.
-                    </p>
+                        <img src = "images/Player_SP.png" 
+                            alt ="SQL query"
+                            width = "678"
+                            height = "455"
+                            class = "image-database">
+                            
 
-                                       
-
-
-                </section>
-
-                <!-- <section class="description">
-                    Demonstaration of the project and output examples
-                    <img src="images/under-construction.png" alt="Under construction sign" class="under_construct"/>
-                </section> -->
-
-            </div>
+                        <p>SQL implementation includes stored procedures to populate tables as well as a 
+                            trigger that records changes of fees in the history table once the fee amount 
+                            changes. The project includes an Oracle SQL script that contains DDL to create 
+                            and populate tables and three sample queries that feature aggregate functions, 
+                            joins, and subqueries. A sample stored procedure is given here. It populates the table
+                            Player. Since Player is a subtype of the Person entity, the procedure needs to update
+                            both tables with the data. I also created stored procedures for populating Person,
+                            Coach, and Payment tables. SQL script contains all these and additional procedures.
+                        </p>
+                    </div>        
+                </div>
         </body>
     </html>

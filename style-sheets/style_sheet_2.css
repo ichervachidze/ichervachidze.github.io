@@ -1,7 +1,8 @@
 img.large{
-    width: 100vw;
-    height: 100vh;
-    z-index: 5;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* z-index: 5; */
 }
 
 img.medium_big{
@@ -9,12 +10,12 @@ img.medium_big{
     height: 280px;
 }
 
-img.medium_java{
+/* img.medium_java{
     position: absolute;
     width: 450px;
     height: 320px;
     z-index: 5;
-}
+} */
 
 img.big {
     width: 600px;
@@ -22,23 +23,31 @@ img.big {
 }
 
 img.medium{
-    width: 300px;
-    height: 200px;
+    margin: 20px;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 img.logo{
     width:90px;
-    height:25px
+    height:auto;
 }
 
-img.large-map{
-    position: absolute;
-    z-index: 5;
+img.image-personal{
+    /* position: absolute;
+    z-index: 5; */
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width:400px;
+    height:280px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    clear: both;
 }
 
-.under{
+/* .under{
     z-index:-1;
-}
+} */
 
 .image-left {
     float: left;
@@ -48,13 +57,13 @@ img.large-map{
 
 }
 
-.image-java {
+/* .image-java {
     float: left;
     width: 450px;
     height:320px;
     margin: 20px;
 
-}
+} */
 
 .image-left-custom {
     float: left;
@@ -63,7 +72,7 @@ img.large-map{
     margin: 20px;
 }
 
-.image-left-erd {
+/* .image-left-erd {
     float: left;
     width: 626px;
     height:640px;
@@ -72,9 +81,54 @@ img.large-map{
     text-align: center;
     background-image: url("../images/ERD.png");
     background-size: cover;
+} */
+
+.image-database {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width:70%;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-.image-left-stored-procedure {
+.image-python {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width:40%;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.image-java {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width:50%;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.image-structures{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width:50%;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.image-console{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width:100%;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* .image-left-stored-procedure {
     float: left;
     width: 640px;
     height:500px;
@@ -83,7 +137,7 @@ img.large-map{
     text-align: center;
     background-image: url("../images/Player_SP.png");
     background-size: cover;
-}
+} */
 
 .img-right {
     float:right;
@@ -126,7 +180,9 @@ img.large-map{
 
 hgroup.title {
     position: absolute;
-    bottom: 3vh;
+    float: left;
+    /* bottom: 3vh; */
+    top: 15em;
     left: 5vw;
     padding: 10px;
     margin: 0px;
@@ -146,6 +202,7 @@ nav a {
     color: white;
     text-decoration: none;
     /* font-weight: bold; */
+    text-shadow:2px 2px 7px #111111;
 }
 nav a:hover {
     color:  #5f0d0d;
@@ -170,7 +227,7 @@ nav>ul>li {
     height:auto;
     margin-left: 5vw;
     /* padding:0 10px 0 10px; */
-    font-size: 1.3vw;
+    font-size: 1.4vw;
     /* text-align: center; */
    
 }
@@ -198,10 +255,10 @@ nav li:hover ul {
 
 
 .wrapper {
-    background-color:  rgba(153, 147, 148, 0.6);
+    /* background-color:  rgba(153, 147, 148, 0.6); */
     margin-top: 50px;
-    background-size: cover;
-    height: 1000px;
+    /* background-size: cover;
+    height: 1000px; */
 }
 
 .wrapper a:hover {
@@ -209,17 +266,46 @@ nav li:hover ul {
     text-decoration: none;
 }
 
-
-.wrapper-structures{
+.wrapper-with-back{
     background-color:  rgba(153, 147, 148, 0.6);
     margin-top: 50px;
-    width: 1170px;
+    padding: 20px;
+    height: auto;
+    line-height:1.8;
+}
+
+.wrapper-with-back h1{
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #5f0d0d
+}
+
+.wrapper-with-back h2{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.wrapper-with-back a {
+    color:  #5f0d0d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* .wrapper-with-back p{
+    width: 980px;
+  
+} */
+
+/* .wrapper-structures{
+    background-color:  rgba(153, 147, 148, 0.6);
+    margin-top: 50px;
+    width: 100% ;
     height: auto;
     padding: 40px;
     color: #3a3838;
     font-size: 16px;
 
-}
+} */
 
 .wrapper-personal{
     background-color:  rgba(153, 147, 148, 0.6);
@@ -243,15 +329,16 @@ nav li:hover ul {
 }
 
 
-.items{
+/* .items-no-flex{
     float:left;
     width: 650px;
     margin: 10px;
-}
+} */
 
 .items article{
     clear: both;
-    font-size: 20px;
+    /* font-size: 20px; */
+    width: 600px;
 }
 
 .items figure{
@@ -259,7 +346,7 @@ nav li:hover ul {
 }
 
 article h2{
-    font-size: 30px;
+    font-size: 1.3em;
     font-weight: bold;
     color: #5f0d0d
 }
@@ -274,20 +361,20 @@ article a:hover h2{
 }
 
 figure{
-    float: left;
-    width: 300px;
-    height: 200px;
-    margin: 20px;
+    /* float: left; */
+    /* width: 300px; */
+    height: auto;
+    margin: 1.2em;
 }
 
 aside {
-    float:left;
+    /* float:left; */
     width: 300px;
     margin: 10px;
     margin-top: 40px;
     font-family: Arial, 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-family: 'Cascadia Code';
-    font-size: 20px;
+    /* font-size: 20px; */
     line-height: 1.8em;
     color: black;
 }
@@ -295,6 +382,7 @@ aside {
 aside a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 .projects a hgroup {
@@ -418,10 +506,38 @@ tr:hover{
 .three { width: 50px;}
 .navbar:hover div { width: 60px;}
 
-.spelling_menu{
+/* .spelling_menu{
     width:250px;
     height:260px;
     float:left;
     margin-right: 10px;
+} */
+
+section {
+    display:flex;
+    flex-wrap: wrap;
+    background-color:  rgba(153, 147, 148, 0.6);
+    width:100%;
+    height:auto;
+    line-height: 1.7;
 }
+
+.small_item{
+    display:flex;
+    /* flex: 1; */
+   
+}
+
+/* .small_item:nth-of-type(1) {
+    flex: 2;
+} */
+
+.text{
+    width: 80%;
+    line-height: 1.8;
+}
+
+/* .LinkedIn a{
+    font:bold;
+} */
 

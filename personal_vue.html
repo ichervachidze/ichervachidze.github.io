@@ -42,35 +42,41 @@
                             <div class="three"></div>
                         </div> -->
                    </nav>
-                   <img src = "images/eugene-z0j9Qf9jZ58-unsplash.jpg" title = "Pechersky District in Kiev, Ukraine" alt = "Kiev at night" class="large"/>                           
+                   <img src = "images/eugene-z0j9Qf9jZ58-unsplash.jpg" 
+                        title = "Pechersky District in Kiev, Ukraine" 
+                        alt = "Kiev at night" 
+                        class="large"/>                           
                
                 </header>
                 <!--End of the header for all pages -->
 
-
-            <div id="app">
-                <div id="wrapper" class = "wrapper-personal">
-                     <!--To the top button-->
+                <!--To the top button-->
                 <a href="#top">
                     <div id = "circle" class="circle">&#8679;</div>
                 </a>
-                <section class = "description">
+
+
+            <div id="app">
+                <div id="wrapper" class = "wrapper-with-back">
+                     
                     <hgroup>
                         <h1>Ukraine</h1>
                         <h2>Eastern Europe</h2>
                         <h3></h3>
                    </hgroup>
-                  
+
+
+                   <div class="text">
                     <article>
                     <!--This section containes general information about Ukraine-->
-                        <div class="image-left">
+                        <!-- <div class="image-left"> -->
                             <img src = "images/Map-Ukraine.jpg" 
                                 alt = "Map of Ukraine" 
                                 :style="{width: mapWidth +'px', height:mapHeight +'px'}"
                                 @mouseover="revealBig"
                                 @mouseleave="hideBig"
-                                class="large-map"/>
-                        </div>
+                                class="image-personal"/>
+                        <!-- </div> -->
                         
                         <p class= "under">Have you ever heard of Ukraine? If not, that's alright. I am going to give you a quick tour 
                             of this wonderful country right here. I was born in Ukraine, an Eastern European country 
@@ -89,12 +95,12 @@
 
                     <article>
                     <!--This section contains information about seasons in Ukraine-->
-                        <div class="image-left">
+                        <!-- <div class="image-left"> -->
                             <img :src = "chestnutsImage"
                                 @mouseover = "revealWinter"
                                 @mouseleave = "hideWinter"
-                                class="medium_big"/>
-                        </div>
+                                class="image-personal"/>
+                        <!-- </div> -->
                         <p>Ukraine enjoys four seasons, and all of them reveal something beautiful about this country. 
                             I grew up in the city of Kiev, the capital of Ukraine. In the spring, it is famous for its
                             blooming chestnut trees which line up pretty much every major street in Kiev. Here, on the left, 
@@ -110,13 +116,13 @@
 
                     <article>
                     <!--This section contains information about food in Ukraine-->
-                        <div class="image-left">
+                        <!-- <div class="image-left"> -->
                             <img :src = "borsch" 
                                 alt = "Ukrainian borsch" 
-                                class="medium_big"
+                                class="image-personal"
                                 @mouseover = "revealBread"
                                 @mouseleave = "hideBread"/>
-                        </div>
+                        <!-- </div> -->
                         <p> No conversation about Ukraine is complete without the mention of food ... Mmmm, the food in
                             Ukraine, I really miss it... Kiev is probably one of the best places to try out different cuisines. 
                             Compared to Western Europe, culinary explorations is Kiev will be very inexpensive, but very high 
@@ -127,13 +133,16 @@
                         </p>
                         
                     </article>
+                    <br>
                     
 
                     <article>
                     <!--This section contains information about Ukrainian language-->
-                    <div class="image-left">
-                        <img src = "images/Ukrainian-alphabet.png" alt = "Ukrainian alphabet" class="medium_big"/>
-                    </div>
+                    <!-- <div class="image-left"> -->
+                        <img src = "images/Ukrainian-alphabet.png" 
+                             alt = "Ukrainian alphabet" 
+                             class="image-personal"/>
+                    <!-- </div> -->
                     <p> How do you like your visit to Ukraine so far? Alright, I am not the best tour guide, but I hope you
                         enjoyed seeing some of the views and tried to imagine what it may look like in real life. If you 
                         ever decide to visit Ukraine, you probably want to learn a few phrases in Ukrainian. You may be 
@@ -196,10 +205,13 @@
                             composer Mykola Leontovich in 1914 and is based on a Ukrainian folk chant. If you wish, 
                             you can listen to the performance in Ukrainian here!
                         </p>
-                        
-                                            
+                        <br>
+                        <br>
+                        <br>
+                        <br>    
                     </article>
-               </section>
+                   </div>
+               
                </div>
             <!-- </div> -->
                <script>
@@ -217,7 +229,7 @@
                            revealBig: function(){
                                 console.log("map is hovered");
                                 this.mapWidth ='600';
-                                this.mapHeight= '350';
+                                this.mapHeight= '420';
                            },
 
                            hideBig: function(){

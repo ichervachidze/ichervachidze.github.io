@@ -47,19 +47,20 @@
                     
                     </nav>
                     <img src = "images/anni-denkova-1GmAWAgBAxc-unsplash.jpg" 
-                            title = "Java, Indonesia" alt = "Mountain range in Java, Indonesia" class="large"/>                                  
+                         title = "Java, Indonesia" 
+                         alt = "Mountain range in Java, Indonesia" 
+                         class="large"/>                                  
                 
                 </header>
-                 <!--End of the header for all pages -->
+                <!--End of the header for all pages -->
 
-
-                <div class = "wrapper-structures" id="wrapper">
-                    <!--To the top button-->
+                <!--To the top button-->
                     <a href="#top">
                         <div id = "circle" class="circle">&#8679;</div>
                     </a>
 
-                <section class ="description">
+                <div id="wrapper" class = "wrapper-with-back">
+                    
                     <!--Introduction and brief description of the project-->
                     <hgroup>
                         <h1>Java</h1>
@@ -68,6 +69,8 @@
                             handling, Junit tests, JDBC with SQL Lite</h3>
                     </hgroup>
 
+
+                    <div class="text">
                     <p>This project simulates economic activity of a small school supply store. The idea behind this
                         simulation allowed me to combine my background in Economics as well as my love of programming.
                         As about anything in Economics, this project relies on a number of assumtions. I will mention them
@@ -85,14 +88,11 @@
                          random. 
                     </p>
 
-                    <div class="image-java">
-                        <img :src = "logical_day" 
+                    <img :src = "logical_day" 
                             alt = "Console output" 
                             @click="revealDay2"
-                            
-                            class="medium_java"/>
-                    </div>
-
+                            class="image-java"/>
+                    
                     <p>This project was completed in several iterations over the course of the 6 week class. 
                         In the first several iterations, all inventory items are loaded into a hashmap structure that maps 
                         a key to a every item in the inventory. Customer's participation is determined by a random
@@ -114,14 +114,13 @@
                         enough time to put this system in place.
                     </p>
 
-                    <div class="image-java">
-                        <img src = "images/concurrentShops.png" 
+                    <img src = "images/concurrentShops.png" 
                             alt = "Console output" 
-                            class="medium_java"
-                            :style = "{width: outputWidth +'px', height:outputHeight +'px'}"
-                            @mouseover = "bigOutput"
-                            @mouseleave = "hideBigOutput"/>
-                    </div>
+                            class="image-java"
+                        :style = "{width: outputWidth +'px', height:outputHeight +'px'}"
+                        @mouseover = "bigOutput"
+                        @mouseleave = "hideBigOutput"/>
+                  
 
                     <p><b>Restocking warning</b> seen above represents low inventory. The program set a certain
                         threshold for inventory items. If the available quantity of any item would
@@ -142,7 +141,7 @@
                     <p>For the last iteration, we experimented with JDBC and SQLLite. I created a 
                         small database that contained the inventory items and ran several SQL queries.
                     </p>
-                </section>
+                </div>
 
                 
             </div>
@@ -151,8 +150,8 @@
                     el:"#wrapper",
                     data: {
                          logical_day: "images/Java_logical_day.png",
-                         outputWidth: "450",
-                         outputHeight: "320",
+                         outputWidth: "480",
+                         outputHeight: "auto",
                     },
 
                     methods: {
@@ -168,14 +167,14 @@
 
                         bigOutput: function(){
                             console.log("concurrent output is hovered");
-                            this.outputWidth = "560";
-                            this.outputHeight = "400";
+                            this.outputWidth = "600";
+                            this.outputHeight = "auto";
                         },
 
                         hideBigOutput: function(){
                             console.log("away from concurrent output");
-                            this.outputWidth = "450";
-                            this.outputHeight = "320";
+                            this.outputWidth = "480";
+                            this.outputHeight = "auto";
                         }
                     }
                 })

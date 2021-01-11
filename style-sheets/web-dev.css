@@ -147,7 +147,7 @@ body{
 .title {
     float: left;
     position: absolute;
-    bottom: 10vh;
+    top: 10em;
     left: 5vw;
     color: white;
     font-size: 36px;
